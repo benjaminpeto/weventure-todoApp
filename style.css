@@ -1,0 +1,121 @@
+/* IMPORT GOOGLE FONT */
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap");
+
+/* VARIABLES */
+
+:root {
+	--bg-color: #dbdcde;
+	--list-color: #ebecee;
+}
+
+/* RESET CSS DEFAULT RULES */
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+html {
+	font-family: "Roboto", sans-serif;
+	background-color: var(--bg-color);
+}
+
+/* MAIN WRAPPER AND TITLE*/
+
+#wrapper {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: center;
+	height: 100vh;
+	width: 50vw;
+	margin: 0 auto;
+	font-weight: 400;
+}
+#wrapper > h1 {
+	margin: 2rem 0;
+}
+
+/* USER INPUT FIELD */
+
+#user-input {
+	width: 100%;
+	border: none;
+	border-radius: 4px;
+	box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.5);
+	padding: 0.8rem 1.5rem;
+}
+
+#user-input:focus {
+	outline: none;
+}
+
+/* LIST */
+
+.list-container {
+	background-color: white;
+	box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.5);
+	width: 100%;
+	border-radius: 4px;
+	margin: 1.5rem 0;
+}
+
+.unordered-list {
+	list-style: none;
+}
+
+li {
+	display: flex;
+	padding: 0.8rem 1.5rem;
+	justify-content: space-between;
+	align-items: center;
+	cursor: pointer;
+	overflow: scroll;
+}
+
+li:nth-child(even) {
+	background-color: var(--list-color);
+}
+
+li:last-child {
+	border-bottom-left-radius: 4px;
+	border-bottom-right-radius: 4px;
+}
+
+/* MARK AS DONE STYLE */
+
+.done {
+	color: #45c046;
+	text-decoration: line-through;
+}
+
+/* BUTTONS */
+
+.btn {
+	padding: 3px 3px;
+	cursor: pointer;
+}
+
+.clear-btn-wrapper {
+	display: flex;
+	width: 100%;
+	justify-content: flex-end;
+}
+
+/* MEDIA QUIERIES */
+
+@media screen and (max-width: 900px) {
+	h1 {
+		font-size: 1.3em;
+	}
+	#wrapper {
+		width: 85vw;
+	}
+}
+
+@media screen and (max-width: 400px) {
+	#wrapper {
+		width: 95vw;
+	}
+}
